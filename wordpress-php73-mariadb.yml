@@ -1,9 +1,8 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: >-
-  AWS CloudFormation Sample Template WordPress_Single_Instance: WordPress is web
-  software you can use to create a beautiful website or blog. This template
-  installs WordPress with a local MySQL database for storage. It demonstrates
-  using the AWS CloudFormation bootstrap scripts to deploy WordPress.
+  AWS CloudFormation Sample Template WordPress_Single_Instance: This is an updated version of the sample Wordpress Template available when creating a stack that no longer works as it uses php 5.3 and latest WordPress requires 5.6 or greater. The original also uses outdated AMIs hardcoded per region.
+  I have updated this to install php7.3 via amazon-linux-extras, mariadb and to use SSM parameter store query to get the latest AMI for the region.
+  WordPress is websoftware you can use to create a beautiful website or blog. This template installs WordPress with a local MariaDB database for storage. It demonstrates using the AWS CloudFormation bootstrap scripts to deploy WordPress.
   **WARNING** This template creates an Amazon EC2 instance. You will be billed
   for the AWS resources used if you create a stack from this template.
 Parameters:
